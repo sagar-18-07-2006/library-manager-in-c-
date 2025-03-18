@@ -207,6 +207,26 @@ int main()
     // library.displayBooks();
     // library.displayMembers();
     // created a run to checlk class working
+    int n;
+    cout << "emter number of books";
+    for (int i = 0; i < n; i++)
+    {
+        string s, t;
+        cout << "enter the title of book";
+        cin >> s;
+        cout << "enter the title of book";
+        cin >> t;
+        library.addBook(Book(i, s, t));
+        int k;
+        cin >> k;
+        for (int i = 0; i < k; i++)
+        {
+            string l;
+            cout << "enter name of member";
+            cin >> l;
+            library.addMember(Member((100 + i), l));
+        }
+    }
 
-    return 0;
+        return 0;
 }
