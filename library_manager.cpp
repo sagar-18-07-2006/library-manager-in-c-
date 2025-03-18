@@ -218,6 +218,7 @@ int main()
         cin >> t;
         library.addBook(Book(i, s, t));
         int k;
+        cout<<"no of members you want to add";
         cin >> k;
         for (int i = 0; i < k; i++)
         {
@@ -227,6 +228,38 @@ int main()
             library.addMember(Member((100 + i), l));
         }
     }
+    // show initial number of books and members 
+    library.displayBooks();
+    library.displayMembers();
+    int o;
+    cout<<"enter number of books you want to get issued ";
+    cin>>o;
+    for (int i=0;i<o;i++){
+        int w,l;
+        cout<<"enter book id ";
+        cin>>w;
+        cout<<"enter member id ";
+        cin>>l;
+        library.issueBook(w,l);
 
-        return 0;
+    }
+    int f;
+    cout<<"enter number of books you want to get returned ";
+    cin>>f;
+    for (int i=0;i<f;i++){
+        int w,l;
+        cout<<"enter book id ";
+        cin>>w;
+        cout<<"enter member id ";
+        cin>>l;
+        library.returnBook(w,l);
+
+    }
+  
+     // Display updated lists
+    library.displayBooks();
+    library.displayMembers();
+
+
+   return 0;
 }
