@@ -178,3 +178,35 @@ public:
         cout << "Book ID not found." << endl;
     }
 };
+
+int main()
+{
+    Library library;
+
+    // // Adding books
+    // library.addBook(Book(1, "1984", "George Orwell"));
+    // library.addBook(Book(2, "To Kill a Mockingbird", "Harper Lee"));
+    // library.addBook(Book(3, "The Great Gatsby", "F. Scott Fitzgerald"));
+
+    // // Adding members
+    // library.addMember(Member(101, "Alice"));
+    // library.addMember(Member(102, "Bob"));
+
+    // // Display books and members
+    // library.displayBooks();
+    // library.displayMembers();
+
+    // // Issue and return books
+    // cout << "\nIssuing and Returning Books:\n";
+    // library.issueBook(1, 101);
+    // library.issueBook(2, 102);
+    // library.returnBook(1, 101);
+    // library.returnBook(3, 102); // Non-issued book
+
+    // // Display updated lists
+    // library.displayBooks();
+    // library.displayMembers();
+    // created a run to checlk class working
+
+    return 0;
+}
