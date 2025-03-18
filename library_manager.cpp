@@ -50,3 +50,36 @@ public:
         }
     }
 };
+class Member
+{
+private:
+    int memberID;
+    string name;
+    int booksIssued;
+
+public:
+    Member(int id, string memberName)
+        : memberID(id), name(memberName), booksIssued(0) {}
+
+    void displayMember()
+    {
+        cout << "Member ID: " << memberID << ", Name: " << name
+             << ", Books Issued: " << booksIssued << endl;
+    }
+
+    int getID() { return memberID; }
+    string getName() { return name; }
+
+    void issueBook()
+    {
+        booksIssued++;
+    }
+
+    void returnBook()
+    {
+        if (booksIssued > 0)
+        {
+            booksIssued--;
+        }
+    }
+};
