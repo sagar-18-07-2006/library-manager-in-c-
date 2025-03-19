@@ -209,57 +209,75 @@ int main()
     // created a run to checlk class working
     int n;
     cout << "emter number of books";
+    cin >> n;
     for (int i = 0; i < n; i++)
     {
         string s, t;
-        cout << "enter the title of book";
-        cin >> s;
-        cout << "enter the title of book";
-        cin >> t;
+        cout << "enter the title of book" << endl;
+        getline(cin, s);
+        cout << "enter the namae of author of book" << endl;
+        getline(cin, t);
         library.addBook(Book(i, s, t));
-        int k;
-        cout<<"no of members you want to add";
-        cin >> k;
-        for (int i = 0; i < k; i++)
+    }
+    int k;
+    cout << "no of members you want to add";
+    cin >> k;
+    for (int i = 0; i < k; i++)
+    {
+        string l;
+        cout << "enter name of member";
+        getline(cin, l);
+
+        library.addMember(Member((100 + i), l));
+    }
+    // show initial number of books and members
+    library.displayBooks();
+    library.displayMembers();
+
+    int o;
+    cout << "enter number of books you want to get issued ";
+    cin >> o;
+    if (o > 0)
+    {
+        cout << "we will check our library and if we have the book you want we will issue it ";
+        for (int i = 0; i < o; i++)
         {
-            string l;
-            cout << "enter name of member";
+            int w, l;
+            cout << "enter book id ";
+            cin >> w;
+            cout << "enter member id ";
             cin >> l;
-            library.addMember(Member((100 + i), l));
+            library.issueBook(w, l);
         }
     }
-    // show initial number of books and members 
-    library.displayBooks();
-    library.displayMembers();
-    int o;
-    cout<<"enter number of books you want to get issued ";
-    cin>>o;
-    for (int i=0;i<o;i++){
-        int w,l;
-        cout<<"enter book id ";
-        cin>>w;
-        cout<<"enter member id ";
-        cin>>l;
-        library.issueBook(w,l);
-
+    else
+    {
+        cout << "waiting for you to get  a book from us";
     }
+
     int f;
-    cout<<"enter number of books you want to get returned ";
-    cin>>f;
-    for (int i=0;i<f;i++){
-        int w,l;
-        cout<<"enter book id ";
-        cin>>w;
-        cout<<"enter member id ";
-        cin>>l;
-        library.returnBook(w,l);
-
+    cout << "enter number of books you want to get returned ";
+    cin >> f;
+    if (f > 0)
+    {
+        cout<<"We welcome you just enter the details to get book returned";
+        for (int i = 0; i < f; i++)
+        {
+            int w, l;
+            cout << "enter book id ";
+            cin >> w;
+            cout << "enter member id ";
+            cin >> l;
+            library.returnBook(w, l);
+        }
     }
-  
-     // Display updated lists
+    else{
+        cout<<"please return books after you have read";
+    }
+
+    // Display updated lists
     library.displayBooks();
     library.displayMembers();
 
-
-   return 0;
+    return 0;
 }
