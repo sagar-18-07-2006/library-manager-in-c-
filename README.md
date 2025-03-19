@@ -1,3 +1,10 @@
+  Technical Requirments to run a code 
+
+  1.) download a c++ compiler in your device
+
+   2.) download any ide for c++
+  
+
 # library-manager-in-c-
 A simple and efficient Library Management System written in C++. 
 This project allows users to add, delete, search, and manage books in a library.
@@ -15,3 +22,4 @@ Tech Stack:
 
 **C++ (OOP principles)
 File Handling (for persistent storage)**
+
